@@ -978,7 +978,7 @@ footer .container-2 .phone {
         height: 100%;
         margin: auto;
         background-color: #A2C0A5;
-        background-image: url('/images/video-img.png');
+        background-image: url('../images/video-img.png');
         object-fit: contain;
         background-repeat: no-repeat;
         padding: 0;
@@ -998,7 +998,7 @@ footer .container-2 .phone {
     }
 
     .how-we-work-container {
-        background-image: url('/images/goal-bg.jpg');
+        background-image: url('../images/goal-bg.jpg');
         background-repeat: no-repeat;
         object-fit: contain;
         background-size: 100% 100%;

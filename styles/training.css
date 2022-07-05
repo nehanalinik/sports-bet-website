@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Roboto:wght@400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-green: #296438;
+    --light-green: #7EB620;
+    --dark-gray: #34393F;
+    --red: #AB231D;
+}
+
+button,
+textarea,
+input {
+    font-family: 'Inder', sans-serif;
+}
+
+body {
+    font-family: 'Inder', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-color: #FFF;
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    padding: 0.5rem 1.5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header .logo {
+    max-width: min-content;
+}
+
+header .navigation {
+    display: none;
+}
+
+header .navigation.active {
+    background-color: #fff;
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 90vh;
+    overflow-y: none;
+    overflow: overlay;
+}
+
+header .navigation.active .flags-contents {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #C4C4C4;
+    padding: 2rem 4rem;
+    row-gap: 2rem;
+}
+
+header .navigation.active .flags-contents .flag-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navigation.active .flags-contents .flag-contact .flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+header .navigation.active .flags-contents .flag-contact .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 2rem;
+}
+
+header .navigation.active .flags-contents .flag-contact .contact .phone {
+    display: flex;
+    align-items: center;
+    column-gap: 0.45rem;
+}
+
+header .navigation.active .flags-contents .flag-contact .contact .social-contact {
+    display: flex;
+    column-gap: 0.85rem;
+}
+
+header .navigation.active .flags-contents .privacy {
+    text-align: center;
+}
+
+header .navigation.active .flags-contents .privacy a {
+    color: #000;
+    text-decoration: underline;
+}
+
+header .navigation.active .login {
+    width: 100%;
+}
+
+header .navigation.active .login form {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 2rem 5rem;
+    margin-top: 2rem;
+}
+
+header .navigation.active .login form input {
+    padding: 0.85rem 1.5rem;
+    font-size: 1.025rem;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 0.3rem;
+}
+
+header .navigation.active .login form input:focus {
+    outline: none;
+}
+
+header .navigation.active .login form button {
+    padding: 0.85rem 1.5rem;
+    background-color: var(--dark-green);
+    border-radius: 0.3rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+
+header .navigation.active .login form button:hover {
+    background-color: var(--light-green);
+}
+
+header .navigation.navigation.active .login form .registration {
+    color: #000;
+    text-decoration: underline;
+    text-align: center;
+}
+
+header .navigation.active .nav-lists {
+    display: none;
+}
+
+header .menu-icons {
+    cursor: pointer;
+}
+
+header .menu-icons .close-icon {
+    display: none;
+}
+
+header .menu-icons .menu-icon.hide {
+    display: none;
+}
+
+header .menu-icons .close-icon.show {
+    display: block;
+
+}
+
+main {
+    padding: 2rem 0;
+}
+
+main h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.55rem;
+    padding: 1rem 0;
+}
+
+main .training-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    place-items: center;
+}
+
+main .training-module {
+    display: grid;
+    width: 50%;
+    background-color: #fff;
+    padding-bottom: 0.5rem;
+}
+
+main .module-4 {
+    display: none;
+}
+
+main .module-5 {
+    display: none;
+}
+
+main .module-6 {
+    display: none;
+}
+
+main .module-7 {
+    display: none;
+}
+
+main .module-8 {
+    display: none;
+}
+
+main .module-9 {
+    display: none;
+}
+
+main .training-module img {
+    width: 100%;
+}
+
+main .training-module span {
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1.5px solid #000;
+}
+
+main .training-module h4 {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: 600;
+}
+
+main .training-module p {
+    font-weight: 500;
+    font-size: 0.88rem;
+    padding: 0.5rem 0 0.85rem;
+}
+
+
+main .training-module a {
+    width: 50%;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+main .training-module a button {
+    padding: 0.65rem 0.85rem;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+
+main .training-module a button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.register-container {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.register-container h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    width: 70%;
+    margin: auto;
+    padding: 1rem 1.5rem;
+}
+
+
+.register-container .form-container form div img {
+    display: none;
+}
+
+.register-container .form-container .img-container {
+    display: none;
+}
+
+.register-container .form-container form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.12rem;
+}
+
+.register-container .form-container form input {
+    background-color: #fff;
+    width: 100%;
+    padding: 0.95rem 1.25rem;
+    border-radius: 0.3rem;
+    border: 1px solid #333;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.register-container .form-container form input:focus {
+    outline: none;
+    border: 1.5px solid #000;
+}
+
+.register-container .form-container form button {
+    order: 2;
+    background-color: var(--dark-green);
+    color: #fff;
+    width: 100%;
+    padding: 0.95rem 1.25rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+
+.register-container .form-container form button:hover {
+    background-color: var(--light-green);
+}
+
+.register-container .form-container form .read-rules {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-container .form-container form .read-rules input {
+    width: 8%;
+}
+
+.register-container .form-container form .read-rules label {
+    width: 100%;
+}
+
+footer {
+    background-color: #C4C4C4;
+    display: flex;
+    column-gap: 5rem;
+    padding: 3rem 5rem;
+}
+
+footer .container-1 .logo {
+    display: none;
+}
+
+footer .container-1 {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+footer .container-1 ul {
+    display: none;
+}
+
+footer .container-1 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.65rem;
+    order: 2;
+
+}
+
+footer .container-1 ul li a {
+    color: #000;
+    border-bottom: 1px dashed #000;
+}
+
+footer .container-1 ul li a:hover {
+    border-bottom: 1px solid #000;
+}
+
+footer .container-1 .flag {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    height: 100%;
+    order: 1;
+}
+
+footer .container-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer .container-2 .privacy {
+    order: 3;
+    margin-top: 3rem;
+    padding: 1rem 0;
+}
+
+footer .container-2 .privacy span {
+    text-decoration: underline;
+    font-size: 1.05rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+footer .container-2 .social {
+    order: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+    padding: 1.5rem 0;
+}
+
+footer .container-2 .phone {
+    order: 1;
+    text-align: end;
+}
+
+/* & Media Queries */
+@media screen and (max-width: 590px) {
+    header .navigation.active .flags-contents .privacy a {
+        font-size: 0.75rem;
+        padding-top: 0.7rem;
+        padding-left: 2rem;
+    }
+
+    header .navigation.active .nav-lists {
+        left: 20%;
+        row-gap: 0.45rem;
+    }
+
+    footer {
+        column-gap: 2rem !important;
+        padding: 3rem 4rem !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 0.5rem;
+        background-color: #fff;
+        padding: 0.5rem 2.05rem;
+        height: 10vh;
+    }
+
+    header .logo {
+        max-width: 100%;
+    }
+
+    header .navigation {
+        margin-top: 0.65rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        column-gap: 2rem;
+    }
+
+    header .navigation .nav-lists {
+        display: flex;
+        align-items: center;
+        column-gap: 1.25rem;
+    }
+
+    header .navigation .nav-lists li a {
+        color: #000;
+        font-weight: 500;
+        font-size: 1.05rem;
+        white-space: nowrap;
+        transition: 0.3s all ease-in;
+    }
+
+    header .navigation .nav-lists li a:hover {
+        border-bottom: 1px solid var(--dark-green);
+        color: var(--dark-green);
+    }
+
+    header .navigation .flags-contents .flag-contact .flag {
+        display: flex;
+        align-items: center;
+        column-gap: 0.65rem;
+    }
+
+    header .navigation .login form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    header .navigation .login form input {
+        order: 1;
+        padding: 0.3rem 1rem;
+        background-color: #C4C4C4;
+        color: #000;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+    }
+
+    header .navigation .login form input:focus {
+        outline: none;
+    }
+
+    header .navigation .login form input::placeholder {
+        color: #000;
+    }
+
+    header .navigation .login form button {
+        order: 2;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        color: #fff;
+        background-color: var(--dark-green);
+        transition: 0.3s all ease-in;
+        cursor: pointer;
+    }
+
+    header .navigation .login form button:hover {
+        background-color: var(--light-green);
+    }
+
+    header .navigation .login form a {
+        order: 3;
+        color: var(--dark-green);
+        transition: 0.3s all ease-in;
+    }
+
+    header .navigation .login form a:hover {
+        color: #AB231D;
+    }
+
+    header .navigation .login form a span {
+        border-bottom: 1px solid var(--dark-green);
+    }
+
+    header .navigation .login form a span:hover {
+        border-bottom: 1px dashed #AB231D;
+    }
+
+    header .navigation .flags-contents .flag-contact .contact {
+        display: none;
+    }
+
+    header .navigation .flags-contents .privacy {
+        display: none;
+    }
+
+    header .menu-icons {
+        display: none;
+    }
+
+    main {
+        padding-top: 4rem;
+        /* margin-top: 3rem; */
+    }
+
+    main .training-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2rem;
+        place-items: center;
+        width: 100%;
+    }
+
+    main .training-module {
+        display: grid;
+        width: 80%;
+        background-color: #fff;
+        padding-bottom: 0.5rem;
+    }
+
+    main .training-container-2 .training-module {
+        display: grid;
+        width: 88%;
+        background-color: #fff;
+        padding-bottom: 0.5rem;
+    }
+
+    main .module-4 {
+        display: block;
+    }
+
+    main .training-module a {
+        width: 50%;
+        color: #000;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    main .module-5 {
+        display: block;
+    }
+
+    main .module-6 {
+        display: block;
+    }
+
+    main .module-7 {
+        display: block;
+    }
+
+    main .module-8 {
+        display: block;
+    }
+
+    main .module-9 {
+        display: block;
+    }
+
+    .training-container-2 {
+        display: grid;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .training-container-2 {
+        padding: 2rem 0;
+        background-color: #A2C0A5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        width: 100%;
+        padding-left: 2.8rem;
+    }
+
+    .training-container-2 .training-module {
+        width: 80%;
+    }
+
+    .training-container-2 .training-module img {
+        width: 100%;
+    }
+
+    .register-container {
+        display: none;
+    }
+
+    footer {
+        background-color: #C4DDE4;
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 3.5rem;
+        padding: 5rem 6rem;
+    }
+
+    footer .container-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+    }
+
+    footer .container-1 .logo {
+        order: 1;
+        display: block;
+    }
+
+    footer .container-1 ul {
+        order: 2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 1rem;
+    }
+
+    footer .container-1 ul li a {
+        color: #000;
+    }
+
+    footer .container-1 .flag {
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 1.25rem;
+        height: 100%;
+        width: 40%;
+    }
+
+    footer .container-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer .container-2 .privacy {
+        order: 1;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    footer .container-2 .privacy span {
+        text-decoration: underline;
+        font-size: 1.05rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    footer .container-2 .social {
+        order: 2;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 0.5rem;
+        padding: 0;
+    }
+
+    footer .container-2 .phone {
+        order: 3;
+        text-align: start;
+        width: max-content;
+    }
+}
+
+@media screen and (min-width: 1070px) {
+    header {
+        column-gap: 1rem;
+        padding: 0.5rem 2.25rem;
+    }
+
+    header .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        column-gap: 3rem;
+    }
+
+    header .navigation .login form {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1115px) {
+    header .navigation .login form {
+        width: 100%;
+    }
+}

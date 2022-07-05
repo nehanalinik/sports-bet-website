@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Roboto:wght@400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button,
+textarea,
+input {
+    font-family: 'Inder', sans-serif;
+}
+
+:root {
+    --dark-green: #296438;
+    --light-green: #7EB620;
+}
+
+body {
+    font-family: 'Inder', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+html {
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0 2rem;
+    word-wrap: break-word;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 0 2.5rem;
+}
+
+main form input {
+    padding: 1rem 1.5rem;
+    border: 1px solid #333;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+main form input:focus {
+    outline: none;
+}
+
+main form .read-rules {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+main form button {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--dark-green);
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    transition: 0.3s all ease-in;
+}
+
+main form button:hover {
+    background-color: var(--light-green);
+}
+
+@media screen and (min-width: 1024px) {
+    main form {
+        padding: 0 15rem;
+    }
+}

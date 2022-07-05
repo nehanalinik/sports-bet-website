@@ -198,7 +198,7 @@ header .menu-icons .close-icon.show {
 }
 
 main {
-    padding: 2rem 0;
+    padding: 2rem 0 0;
 }
 
 main h1 {
@@ -594,7 +594,6 @@ footer .container-2 .phone {
 
     main {
         padding-top: 4rem;
-        /* margin-top: 3rem; */
     }
 
     main .training-container {
@@ -615,7 +614,7 @@ footer .container-2 .phone {
     main .training-container-2 .training-module {
         display: grid;
         width: 88%;
-        background-color: #fff;
+        background-color: transparent;
         padding-bottom: 0.5rem;
     }
 
